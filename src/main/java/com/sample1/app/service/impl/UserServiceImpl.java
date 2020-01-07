@@ -1,6 +1,5 @@
 package com.sample1.app.service.impl;
 
-import java.beans.BeanProperty;
 import java.util.ArrayList;
 
 import org.springframework.beans.BeanUtils;
@@ -66,7 +65,7 @@ public class UserServiceImpl implements UserService {
 		UserEntity userEntity = userRepository.findByEmail(email);
 		BeanUtils.copyProperties(userEntity, returnValue);
 		
-		return null;
+		return returnValue;
 	}
 
 }
